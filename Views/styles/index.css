@@ -1,0 +1,59 @@
+body{
+	
+	margin-bottom: 5%;
+}
+
+.stocks{
+	display: inline-block;
+	margin-left: 4%;
+	width: 100%;
+	margin-top : 1%;
+}
+.stock{
+	margin-top: 1%;
+	display: inline-block;
+	margin-left: 4%;
+	padding-left: 1%;
+	width: 15%;
+	min-width: 150px;
+	height:  80px;
+	border : 2px solid #CAC8C4  ;
+	background-color: #E5E3E0;
+	text-align: center;;
+	position:  relative;;
+}
+.stock p{
+	display: inline-block;
+	font-size: 2.5em;
+	padding-top: 10%;
+	font-family: 'Aclonica';
+	text-align: center;
+
+}
+.stock i{
+	display: inline-block;
+	color:  red;
+	vertical-align: top;
+	position: absolute;
+	padding-left: 1%;
+	position: absolute;
+	top: 0;
+	right: 1%;
+}
+.stock:hover{
+	 box-shadow: 4px 4px #888888;
+}
+input{
+	margin-top: 2%;
+	margin-left: 8%;
+	border-radius: 6px;
+	border: 2px solid green;
+	padding-left: 1%;
+}
+input:focus{
+	outline:  0;
+}
+img{
+	margin-top: 10%;
+	margin-left: 40%
+}
