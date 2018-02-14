@@ -1,6 +1,7 @@
 var express= require('express');
 var app = express();
 var mongo = require('mongodb').MongoClient;
+var dotenv = require('dotenv');
 var mongourl =  'mongodb://shabab:shabab@ds155577.mlab.com:55577/toogle';
 
 var goo = require('google-finance');
@@ -9,7 +10,11 @@ var socket = require('socket.io');
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
-
+dotenv.config({verbose:true});
+var port = process.env.PORT || 8080;
+var server = app.listen(port, function(){
+	console.log('Port is listening');
+});
 
 app.use(express.static('Views'));
 
@@ -107,11 +112,6 @@ app.post('/removestock',function(req,res){
 
 app.get('/',function(req,res){
 	res.sendFile(process.cwd()+'/Views/index.html');
-});
-
-
-var server = app.listen(8080, '127.0.0.1', function(){
-	console.log('Port is listening');
 });
 
 var io = socket(server);
